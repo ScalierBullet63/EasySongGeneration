@@ -240,5 +240,5 @@ lyrics
 
 # 启动应用
 if __name__ == "__main__":
+    demo.launch(server_name="127.0.0.1", server_port=8081)
     torch.set_num_threads(1)
-    demo.launch(server_name="0.0.0.0", server_port=8081)
