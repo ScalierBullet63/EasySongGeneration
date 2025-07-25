@@ -22,3 +22,5 @@ transformers==4.37.2
 vector-quantize-pytorch>=1.22.17
 wheel>=0.45.1
 x-transformers>=2.3.25
+gradio==4.44.1
+pydantic==2.10.6
