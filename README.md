@@ -21,7 +21,7 @@ You can download the portable `.7z` archive from the official release page:
    - Make sure you have [Git LFS](https://git-lfs.com/) installed.
    - Open a terminal and run:
      ```bash
-     git lfs clone https://huggingface.co/tencent/SongGeneration
+     git clone https://huggingface.co/tencent/SongGeneration
      ```
    - Copy the following folders from the cloned repo into the **root** of the extracted folder:
      - `ckpt`
