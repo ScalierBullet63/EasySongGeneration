@@ -16,6 +16,8 @@ You can download the portable `.7z` archive from the official release page:
 
 1. **Extract the Archive**
    - Unzip the `.7z` archive to a folder of your choice.
+     
+   >⚠️ Important: To avoid extraction errors, make sure you’ve installed the latest version of [7-Zip](https://www.7-zip.org/download.html) before opening the archive.
 
 2. **Clone the Model Repository**
    - Make sure you have [Git LFS](https://git-lfs.com/) installed.
