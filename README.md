@@ -15,11 +15,13 @@ You can download the portable `.7z` archive from the official release page:
 ## 📦 Setup Instructions
 
 1. **Extract the Archive**
+
    - Unzip the `.7z` archive to a folder of your choice.
-     
-   >⚠️ Important: To avoid extraction errors, make sure you’ve installed the latest version of [7-Zip](https://www.7-zip.org/download.html) before opening the archive.
+
+   > ⚠️ Important: To avoid extraction errors, make sure you’ve installed the latest version of [7-Zip](https://www.7-zip.org/download.html) before opening the archive.
 
 2. **Clone the Model Repository**
+
    - Make sure you have [Git LFS](https://git-lfs.com/) installed.
    - Open a terminal and run:
      ```bash
@@ -30,6 +32,7 @@ You can download the portable `.7z` archive from the official release page:
      - `third_party`
 
 3. **Disable Flash Attention**
+
    - Open the file:
      ```
      ckpt\songgeneration_base\config.yaml
@@ -47,7 +50,7 @@ You can download the portable `.7z` archive from the official release page:
 4. **Run the Application**
    - In the root folder, execute the following command:
      ```bash
-     .\tools\gradio\run_embeded.bat .\ckpt\songgeneration_base\
+     .\tools\gradio\run_embedded.bat .\ckpt\songgeneration_base\
      ```
 
 ---
@@ -86,3 +89,4 @@ Huge thanks to [**mingyi456**](https://github.com/mingyi456) for helping resolve
   journal={arXiv preprint arXiv:2506.07520},
   year={2025}
 }
+```
