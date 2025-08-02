@@ -6,9 +6,9 @@ This is a portable version of [Tencent's SongGeneration](https://huggingface.co/
 
 ## 📥 Download
 
-You can download the portable `.7z` archive from the official release page:
+You can download the latest portable `.7z` archive from the official release page:
 
-🔗 [EasySongGeneration_WinPortable_25072025.7z](https://github.com/ScalierBullet63/EasySongGeneration/releases/download/25072025/EasySongGeneration_WinPortable_25072025.7z)
+🔗 [EasySongGeneration_WinPortable.7z](https://github.com/ScalierBullet63/EasySongGeneration/releases/latest/download/EasySongGeneration_WinPortable.7z)
 
 ---
 
