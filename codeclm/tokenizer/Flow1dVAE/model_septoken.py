@@ -275,6 +275,11 @@ class PromptCondAudioDiffusion(nn.Module):
         # self.wav2vec = Wav2Vec2BertModel.from_pretrained("facebook/w2v-bert-2.0", trust_remote_code=True)
         # self.wav2vec_processor = AutoFeatureExtractor.from_pretrained("facebook/w2v-bert-2.0", trust_remote_code=True)
         self.bestrq = MusicFMModel(MusicFMConfig())
+<<<<<<< HEAD
+=======
+        bestrq_weights = torch.load(ssl_path, map_location='cpu')
+        self.bestrq.load_state_dict(bestrq_weights, strict=False)
+>>>>>>> b7e5003 (remove fairseq)
         self.rsq48tobestrq = torchaudio.transforms.Resample(48000, 24000)
         self.rsq48tohubert = torchaudio.transforms.Resample(48000, 16000)
         self.rvq_bestrq_emb = ResidualVectorQuantize(input_dim = 1024, n_codebooks = 1, codebook_size = 16_384, codebook_dim = 32, quantizer_dropout = 0.0, stale_tolerance=200)
