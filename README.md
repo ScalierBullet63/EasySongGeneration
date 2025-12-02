@@ -20,18 +20,32 @@ You can download the latest portable `.7z` archive from the official release pag
 
    > ⚠️ Important: To avoid extraction errors, make sure you’ve installed the latest version of [7-Zip](https://www.7-zip.org/download.html) before opening the archive.
 
-   > ⚠️ Important: To avoid extraction errors, make sure you’ve installed the latest version of [7-Zip](https://www.7-zip.org/download.html) before opening the archive.
-
 2. **Clone the Model Repository**
 
    - Make sure you have [Git LFS](https://git-lfs.com/) installed.
+   - Open a terminal and run **only one** of the following commands depending on the model you want:
+
    - Open a terminal and run:
-     ```bash
-     git clone https://huggingface.co/tencent/SongGeneration
-     ```
+   ```bash
+   # SongGeneration-base (10G/16G)
+   git clone https://huggingface.co/tencent/SongGeneration
+   ```
+     
    - Copy the following folders from the cloned repo into the **root** of the extracted folder:
      - `ckpt`
      - `third_party`
+
+- If you want to use a different model, download one of these into the `ckpt` folder:
+     ```bash
+     # SongGeneration-base-new (10G/16G)
+     git clone https://huggingface.co/lglg666/SongGeneration-base-new
+
+     # SongGeneration-base-full (12G/18G)
+     git clone https://huggingface.co/lglg666/SongGeneration-base-full
+
+     # SongGeneration-large (22G/28G)
+     git clone https://huggingface.co/lglg666/SongGeneration-large
+     ```
 
 3. **Disable Flash Attention**
 
@@ -39,6 +53,8 @@ You can download the latest portable `.7z` archive from the official release pag
      ```
      ckpt\songgeneration_base\config.yaml
      ```
+   > ⚠️ Note: if you are using a different model change `songgeneration_base` with the folder you downloaded.
+
    - Go to **line 39** and change:
      ```yaml
      use_flash_attn_2: true
@@ -49,11 +65,12 @@ You can download the latest portable `.7z` archive from the official release pag
      ```
    - This disables Flash Attention, which may cause issues on some systems.
 
-4. **Run the Application**
+3. **Run the Application**
    - In the root folder, execute the following command:
      ```bash
      .\tools\gradio\run_embedded.bat .\ckpt\songgeneration_base\
      ```
+   > ⚠️ Note: if you are using a different model change `songgeneration_base` with the folder you downloaded.
 
 ---
 
