@@ -35,7 +35,7 @@ You can download the latest portable `.7z` archive from the official release pag
      - `ckpt`
      - `third_party`
 
-- If you want to use a different model, download one of these into the `ckpt` folder and if you want to free up space you can delete `songgeneration_base` folder in `ckpt`:
+- If you want to use a different model, download one of these into the `ckpt` folder and if you want to free up space you can delete the `songgeneration_base` folder in `ckpt`:
      ```bash
      # SongGeneration-base-new (10G/16G)
      git clone https://huggingface.co/lglg666/SongGeneration-base-new
