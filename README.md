@@ -35,7 +35,7 @@ You can download the latest portable `.7z` archive from the official release pag
      - `ckpt`
      - `third_party`
 
-- If you want to use a different model, download one of these into the `ckpt` folder:
+- If you want to use a different model, download one of these into the `ckpt` folder and if you want to free up space you can delete `songgeneration_base` folder in `ckpt`:
      ```bash
      # SongGeneration-base-new (10G/16G)
      git clone https://huggingface.co/lglg666/SongGeneration-base-new
@@ -47,7 +47,7 @@ You can download the latest portable `.7z` archive from the official release pag
      git clone https://huggingface.co/lglg666/SongGeneration-large
      ```
 
-3. **Disable Flash Attention**
+3. **⚠️ Disable Flash Attention only if you experience issues with it**
 
    - Open the file:
      ```
