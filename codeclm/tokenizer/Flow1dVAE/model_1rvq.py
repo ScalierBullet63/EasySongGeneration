@@ -20,6 +20,7 @@ from libs.rvq.descript_quantize3 import ResidualVectorQuantize
 from models_gpt.models.gpt2_rope2_time_new_correct_mask_noncasual_reflow import GPT2Model
 from models_gpt.models.gpt2_config import GPT2Config
 from our_MERT_BESTRQ.mert_fairseq.models.musicfm.musicfm_model import MusicFMModel, MusicFMConfig
+from our_MERT_BESTRQ.mert_fairseq.models.musicfm.musicfm_model import MusicFMModel, MusicFMConfig
 
 from torch.cuda.amp import autocast
 
@@ -295,6 +296,8 @@ class PromptCondAudioDiffusion(nn.Module):
         # self.wav2vec = Wav2Vec2BertModel.from_pretrained("facebook/w2v-bert-2.0", trust_remote_code=True)
         # self.wav2vec_processor = AutoFeatureExtractor.from_pretrained("facebook/w2v-bert-2.0", trust_remote_code=True)
         self.bestrq = MusicFMModel(MusicFMConfig())
+        bestrq_weights = torch.load(ssl_path, map_location='cpu')["model"]
+        self.bestrq.load_state_dict(bestrq_weights, strict=False)
         self.rsq48tobestrq = torchaudio.transforms.Resample(48000, 24000)
         self.rsq48tohubert = torchaudio.transforms.Resample(48000, 16000)
         self.rvq_bestrq_emb = ResidualVectorQuantize(input_dim = 1024, n_codebooks = 1, codebook_size = 16_384, codebook_dim = 32, quantizer_dropout = 0.0, stale_tolerance=200)
