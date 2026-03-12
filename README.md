@@ -45,6 +45,9 @@ You can download the latest portable `.7z` archive from the official release pag
 
      # SongGeneration-large (22G/28G)
      git clone https://huggingface.co/lglg666/SongGeneration-large
+
+     # SongGeneration-large (The newest and best model)
+     git clone https://huggingface.co/lglg666/SongGeneration-v2-large
      ```
 
 3. **⚠️ Disable Flash Attention only if you experience issues with it**
